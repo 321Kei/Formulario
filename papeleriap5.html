@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAPELERIA</title>
+<meta charset="8-UTF">
+<style>
+body{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background: #CE836F;
+color: #fff;
+font-family: Arial, Tw Cen MT, Bahnschrift;
+}
+.logotipo{
+text-align: center;
+font-size: 40px;
+margin-top: 1.2em ;
+}
+img{
+width: 200px;
+border-radius: 10px;
+margin-top: 30px;
+}
+table{
+text-align: center;
+}
+</style>
+</head>
+
+
+<body>
+<h2 class="logotipo">PAPELERIA</h2>
+<div id="header">
+<center>
+<table>
+<tr>
+<td><img src="cuaderno.jpg"><br>CUADERNO PROFESIONAL $65<br>CODIGO:0</td>
+<td><img src="cuaderno media carta.jpg"><br>CUADERNO MEDIA CARTA $45<br>CODIGO:1</td>
+
+<td><img src="libreta.jpg"><br>LIBRETAS $35<br>CODIGO:2</td>
+</tr>
+<tr>
+<td><img src="cinta.jpg"><br>CINTA ADEHSIVA $15<br>CODIGO:3</td>
+<td><img src="separadores.jpg"><br>SEPARADOR $18<br>CODIGO:4</td>
+<td><img src="carpetas.jpg"><br>CARPETAS $55<br>CODIGO:5</td>
+</tr>
+<tr>
+<td><img src="hojas b.jpg"><br>HOJAS BLANCAS $1 C/U<br>CODIGO:6</td>
+<td><img src="hojas c.jpg"><br>HOJAS DE COLOR $1.5 C/U<br>CODIGO:7</td>
+<td><img src="pritt.jpg"><br>LAPIZ ADHESIVO $20<br>CODIGO:8</td>
+</tr>
+<tr>
+<td><img src="lapiz.png"><br>LAPIZ $10<br>CODIGO:9</td>
+<td><img src="pluma.png"><br>PLUMA $15<br>CODIGO:10</td>
+<td><img src="goma.png"><br>GOMA $10<br>CODIGO:11</td>
+</tr>
+<tr>
+<td><img src="sacapuntas.png"><br>SACAPUNTAS $10<br>CODIGO:12</td>
+<td><img src="corrector.jpg"><br>CORRECTOR $15<br>CODIGO:13</td>
+<td><img src="marcatextos.jpg"><br>MARACTEXTOS $10<br>CODIGO:14</td>
+</tr>
+</table>
+</center>
+<h2 align="right"><button id="boton1">
+Cotizar
+</button> </h2>
+<script>
+document.getElementById('boton1').onclick = function(){
+var subtotal=0;
+var total;
+var iva;
+alert('Ingresa el código del producto que desees, para finalizar tu cotización ingresa el número 15');
+do {
+var codigo = prompt("Ingrese el código del producto que desea");
+codigo=parseInt(codigo);
+if(codigo==15) {
+var costo=0;
+subtotal=subtotal+costo;
+}
+else {
+switch(codigo) {
+
+
+case 0:
+var costo=65;
+break;
+case 1:
+var costo=45;
+break;
+case 2:
+var costo=35;
+break;
+case 3:
+var costo=15;
+break;
+case 4:
+var costo=18;
+break;
+case 5:
+var costo=55;
+break;
+case 6:
+var costo=1;
+break;
+case 7:
+var costo=1.5;
+break;
+case 8:
+var costo=20;
+break;
+case 9:
+var costo=10;
+break;
+case 10:
+var costo=15;
+break;
+case 11:
+var costo=10;
+case 12:
+var costo=10;
+break;
+case 13:
+var costo=15;
+break;
+case 14:
+var costo=10;
+break;
+default:
+alert("Opcion no valida");
+var costo=0;
+break;
+}
+subtotal=subtotal+costo;
+}
+} while (codigo!=15);
+iva=subtotal*0.15;
+total=subtotal+iva;
+alert("Subtotal: "+ subtotal+ "\n IVA: "+iva+"\n El total a pagar es: "+total );
+}
+
+</script>
+</body>
+</html>
